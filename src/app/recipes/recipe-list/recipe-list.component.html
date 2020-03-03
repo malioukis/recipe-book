@@ -17,10 +17,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <button class="btn btn-success">New Recipe</button>
+      <button class="btn btn-success ">New Recipe</button>
     </div>
   </div>
-
+<hr>
   <div class="row">
     <div class="col-12" id="item">
       <!-- recipe list -->
@@ -30,7 +30,7 @@
           <p class="list-group-item-text">{{recipe.description}}</p>
         </div>
         <span class="float-right">
-          <img [src]="recipe.imagePath" src="{{recipe.imagePath}}" alt="{{recipe.name}}" style="max-height: 50px;">
+          <img [src]="recipe.imagePath" src="{{recipe.imagePath}}" alt="{{recipe.name}}" class="img-fluid"  style="max-height: 50px;">
         </span>
       </a>
       <app-recipe-item></app-recipe-item>
