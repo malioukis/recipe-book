@@ -8,10 +8,8 @@ import { EventEmitter } from '@angular/core';
 export class ShoppingListService {
   IngredientsChanged = new EventEmitter<Ingredient[]>();
   private ingredients: Ingredient[] = [
-    new Ingredient('Ingredient1', 2),
-    new Ingredient('Ingredient2', 34),
-    new Ingredient('Ingredient3', 45),
-    new Ingredient('Ingredient4', 34)
+    new Ingredient('Ingredient1DEFAULT', 2),
+
   ];
 
   constructor() { }
@@ -24,5 +22,14 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.IngredientsChanged.emit(this.ingredients.slice());
 
+  }
+
+  addIngredients(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients) {
+    //   this.addIngredient(ingredient);
+    // }
+
+    this.ingredients.push(...ingredients);  //spread operator turn an aray of elements to list of elements
+    this.IngredientsChanged.emit(this.ingredients.slice());
   }
 }
