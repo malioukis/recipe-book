@@ -10,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesComponent implements OnInit {
   selectedRecipe: Recipe;
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-  }
 
+    // cross component communication
+    this.recipeService.recipeSelected
+      // get informed about changes
+      .subscribe(
+        // event emmiter in service, emits a recipe
+        (recipe: Recipe) => {
+          this.selectedRecipe = recipe;
+        }
+      );
+  }
 }
