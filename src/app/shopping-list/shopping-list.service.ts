@@ -8,7 +8,7 @@ import { EventEmitter } from '@angular/core';
 export class ShoppingListService {
   IngredientsChanged = new EventEmitter<Ingredient[]>();
   private ingredients: Ingredient[] = [
-    new Ingredient('Ingredient1DEFAULT', 2),
+    new Ingredient('DefaultIngredient', 2),
 
   ];
 

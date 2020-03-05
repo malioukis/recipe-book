@@ -11,26 +11,26 @@ export class RecipeService {
   private recipes: Recipe[] = [
     // calling constructor
     new Recipe(
-      'Test Recipe1',
+      'MyRecipe1',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'https://media.gettyimages.com/photos/herbs-picture-id637769910?b=1&k=6&m=637769910&s=612x612&w=0&h=dV9qigGyhtsmhPEa2y7zjjzRNiZhfOi_TN2XotMMwMU=',
+      'http://lorempixel.com/640/480/food',
       [
-        new Ingredient('Ingredient1', 12),
-        new Ingredient('Ingredient2', 34),
-        new Ingredient('Ingredient3', 55)
+        new Ingredient('May', 12),
+        new Ingredient('Item', 34),
+        new Ingredient('My', 55)
       ]
     ),
     new Recipe(
-      'Test2',
+      'MyRecipe2',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'https://image.shutterstock.com/image-photo/blank-vintage-recipe-cooking-book-600w-504504346.jpg',
+      'http://lorempixel.com/640/480/food',
       [
-        new Ingredient('Ingredient1', 12),
-        new Ingredient('Ingredient2', 34),
-        new Ingredient('Ingredient3', 55),
-        new Ingredient('Ingredient1', 12),
-        new Ingredient('Ingredient2', 34),
-        new Ingredient('Ingredient3', 55)
+        new Ingredient('envisioneer', 12),
+        new Ingredient('TCP', 34),
+        new Ingredient('ccount', 55),
+        new Ingredient('Snap.', 12),
+        new Ingredient('Bagpipes.', 34),
+        new Ingredient('Mouse', 55)
       ]
     )
   ];
