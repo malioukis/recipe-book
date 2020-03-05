@@ -7,9 +7,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./recipes.component.css'],
   providers: [RecipeService]
 })
-export class RecipesComponent implements OnInit, OnDestroy {
+export class RecipesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
