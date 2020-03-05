@@ -29,7 +29,7 @@ export class ShoppingListService {
     //   this.addIngredient(ingredient);
     // }
 
-    this.ingredients.push(...ingredients);  //spread operator turn an aray of elements to list of elements
+    this.ingredients.push(...ingredients);  // spread operator turn an aray of elements to list of elements
     this.IngredientsChanged.emit(this.ingredients.slice());
   }
 }
