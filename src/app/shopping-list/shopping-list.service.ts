@@ -35,4 +35,11 @@ export class ShoppingListService {
     this.ingredients.push(...ingredients);  // spread operator turn an aray of elements to list of elements
     this.IngredientsChanged.next(this.ingredients.slice());
   }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    this.ingredients[index] = newIngredient;
+    this.IngredientsChanged.next(this.ingredients.slice());
+  }
+
+
 }
