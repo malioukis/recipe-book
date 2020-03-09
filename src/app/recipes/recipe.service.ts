@@ -10,8 +10,8 @@ export class RecipeService {
   private recipes: Recipe[] = [
     // calling constructor
     new Recipe(
-      'MyRecipe1',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'My Recipe no1',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       'http://lorempixel.com/640/480/food',
       [
         new Ingredient('May', 12),
@@ -20,8 +20,21 @@ export class RecipeService {
       ]
     ),
     new Recipe(
-      'MyRecipe2',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      'My Recipe no2',
+      'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit.',
+      'http://lorempixel.com/640/480/food',
+      [
+        new Ingredient('envisioneer', 12),
+        new Ingredient('TCP', 34),
+        new Ingredient('ccount', 55),
+        new Ingredient('Snap.', 12),
+        new Ingredient('Bagpipes.', 34),
+        new Ingredient('Mouse', 55)
+      ]
+    ),
+    new Recipe(
+      'My Recipe no3',
+      'Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. amet consectetur adipisicing elit.',
       'http://lorempixel.com/640/480/food',
       [
         new Ingredient('envisioneer', 12),
@@ -32,6 +45,7 @@ export class RecipeService {
         new Ingredient('Mouse', 55)
       ]
     )
+
   ];
   constructor(private shoppingListService: ShoppingListService) { }
 
