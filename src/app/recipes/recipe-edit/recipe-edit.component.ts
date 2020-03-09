@@ -14,7 +14,7 @@ export class RecipeEditComponent implements OnInit {
   id: number;
   editMode: boolean;
   recipeForm: FormGroup;
-  constructor(private route: ActivatedRoute, private recipeService: RecipeService) { }
+  constructor(private route: ActivatedRoute, private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params
@@ -26,6 +26,7 @@ export class RecipeEditComponent implements OnInit {
           this.initForm();
         }
       );
+    // this.onCancel();
   }
   get controls() {
     return (this.recipeForm.get('ingredients') as FormArray).controls;
@@ -42,6 +43,7 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
+    this.onCancel();
   }
 
   onAddIngredient() {
@@ -56,6 +58,9 @@ export class RecipeEditComponent implements OnInit {
     );
   }
 
+  onCancel() {
+    this.router.navigate(['../'], { relativeTo: this.route });
+  }
   private initForm() {
     let recipeName = '';
     let recipeImagePath = '';
@@ -88,6 +93,9 @@ export class RecipeEditComponent implements OnInit {
       ingredients: recipeIngredients
     });
   }
-
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id);
+    location.reload();
+  }
 }
 

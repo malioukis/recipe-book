@@ -35,4 +35,7 @@ export class RecipeDetailComponent implements OnInit {
     // ALTERNATIVE going one level upwards on link
     // this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
   }
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id);
+  }
 }
