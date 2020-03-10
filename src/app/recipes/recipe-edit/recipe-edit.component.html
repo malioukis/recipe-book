@@ -20,16 +20,16 @@
         <div class="col-12">
           <div class="form-group">
             <label for="imagePath">Image URL</label>
-            <input type="url" id="imagePath" formControlName="imagePath" class="form-control">
+            <input type="url" id="imagePath" formControlName="imagePath" class="form-control" #imagePath>
           </div>
         </div>
       </div>
 
-      <!-- <div class="row">
+      <div class="row">
         <div class="col-12">
-          <img src="" alt="" class="img-fluid">
+          <img [src]="imagePath.value" alt="" class="img-fluid">
         </div>
-      </div> -->
+      </div>
 
       <div class="row">
         <div class="col-12">
